@@ -1,0 +1,9 @@
+
+This is a character Stream 
+ Write a program to read and write content to a file using FileReader and FileWriter. 
+  CharacterStream uses 2byte/char. 
+   FileWriter to write data into file and FileReader to read data from the file
+This is a character Stream 
+ Write a program to read and write content to a file using FileReader and FileWriter. 
+  CharacterStream uses 2byte/char. 
+   FileWriter to write data into file and FileReader to read data from the file
