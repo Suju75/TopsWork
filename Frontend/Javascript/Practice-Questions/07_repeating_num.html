@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern with num j</title>
+    <style>
+        .pattern{
+            font-size: 40px;
+            padding:10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let n=7;
+        for(let i=1; i<=n; i++){
+            let j=1;
+            for(j=1; j<=i; j++){
+                document.write(`<span class="pattern">${j}</span>`);
+            }
+            document.write(`<div></div>`)
+        }
+    </script>
+</body>
+</html>

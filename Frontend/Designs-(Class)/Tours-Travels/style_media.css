@@ -1,0 +1,796 @@
+/* =======================media query========================== */
+@media (max-width:576px){
+    .header .navbar{
+        justify-content: space-between;
+        padding: 0 var(--p10);
+    }
+    .header .navbar .nav-left{
+        font-size: var(--f20);
+        padding: var(--p10);
+    }
+    .header .navbar .nav-right ul,.header .navbar .nav-right form{
+        display: none;
+    }
+    .header .navbar .nav-right .setting {
+        font-size: var(--f20);
+        border: 1px solid var(--black);
+        padding: var(--p5) var(--p10);
+        border-radius: var(--p10);
+        margin-left: var(--p20);
+        background-color: var(--lightblue);
+        color:var(--white);
+        display: block;
+    }
+    .main, .main2, .main3, .main4{
+        height: calc(100vh - 57.6px);
+        margin-top: 57.6px;
+    }
+    .main-heading{
+        padding: var(--p20);
+    }
+    .main-heading h1{
+        font-size:var(--f40);
+    }
+    .main-heading p{
+        font-size:var(--f14);
+        color: var(--black);
+    }
+    .main-heading a{
+        margin: var(--p20) 0;
+        width: 150px;
+    }
+    /* ========================form-sec============== */
+    .form-sec .form-tour{
+        width: 100%;
+        padding: var(--p50) 0;    
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px;
+    }
+    .form-sec .form-tour{
+        margin: 0 15px;        
+    }
+    .form-sec .form-tour .find-btn button{
+        width: 90%;
+        margin-top: 20px;
+        
+    }
+    /* ================about-sec===================== */
+    .about-sec {
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .about-left{
+        width: 100%; 
+    }
+    .about-sec .about-right{
+        width: 100%;
+        padding:0;
+    }
+    .about-sec .about-right #plan-head{
+        font-size:var(--f30);
+    }
+    .about-sec .about-right .para{
+        line-height: 25px;
+        letter-spacing:1px;
+    }
+    .about-sec .about-right p{
+        margin-top: var(--p15);
+        font-size: var(--f15);
+    }
+    /* ==========================features-sec=================== */
+
+.feature-head h1{
+    font-size: var(--f30);
+}
+.feature-head p{
+    font-size: var(--f25);
+}
+.feature-slide{
+    padding: 20px 15px;
+}
+.feature-slide .slides{
+    width: 300px;
+}
+.data-class ul .rating,p{
+     font-size: var(--f16);
+}
+.data-class .place a{
+    font-size:16px;
+}
+/* ======================= statistics-sec ============ */
+
+.statistics-head h1{
+    font-size: var(--f30);
+}
+.statistics-head .exp{
+    font-size: var(--f30);
+}
+.statistics-body{
+    margin-top: 60px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    padding: 0 20px;
+    
+}
+.statistics-body .icon{
+    font-size: var(--f25);
+    width: 60px;
+    height: 60px;
+}
+.statistics-body .num{
+    font-size: var(--f30);
+}
+.statistics-body .sub-des{
+    font-size: var(--f16);
+}
+.container-des{
+    gap: 5px;
+}
+/* ======================service-sec========== */
+.service-class{
+    padding: 0 20px;
+}
+.service-heading{
+    margin-bottom: 40px;
+}
+.service-heading h1{
+    font-size: var(--f30);
+}
+.service-heading p{
+    font-size: var(--f20);
+}
+.service-body{
+    grid-template-columns: repeat(1,1fr);
+}
+.box1{
+ width: 290px;
+ height: 300px;
+ margin: 0;
+}
+.box1 a{
+    padding: 0px;
+    gap: 10px;
+}
+.box1 .bold-heading{
+    font-size: var(--f25);
+}
+.box1 .service-description{
+    font-size: var(--f14);
+    font-weight: 500;
+    line-height: 30px;
+}
+/* ======================features-sec2====== */
+
+.tour-features .tour-container{
+    padding:0 0px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 80px auto;
+    width: 90%;
+}
+.tour-container .tour-left{
+    width: 100%;
+    height:300px;
+    background-size: cover;
+    background-position: center;
+}
+.tour-container .tour-right{
+    width: 100%;   
+    padding: 0;
+}
+.tour-right h1{
+    margin-top: 50px;
+    font-size: var(--f25);
+}
+.tour-right .sub-heading{
+    font-size: var(--f30);
+}
+.tour-right .para{
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+.tour-right .speciality{
+    margin: 0px 0;
+}
+.tour-right .speciality .fa-certificate, .fa-money-bill-wave{
+    padding:15px;
+} 
+.speciality .bold-sub-heading{
+    margin-left: 20px;
+}
+/* ===============================blog-sec=============== */
+.blog-class{
+    padding: 0;
+}
+.blog{
+    width: 96%;
+    padding: 50px 0;
+}
+
+.blog-body{
+    width: 96%;
+    grid-template-columns: repeat(1,1fr);
+}
+.blog-data{
+    gap: 20px;
+    padding:30px;
+
+}
+.blog-row1{
+    gap:15px;
+    font-size: var(--f14);
+}
+
+.blog-data .blog-name a{
+    font-size:20px;
+}
+.blog-data p{
+    line-height: 25px;
+}
+.blog-data .blog-button{
+    width: 120px;
+    padding: 12px 0px;
+
+}
+.blog-data .blog-button a{
+    font-size: var(--f16);
+}
+.blog-img .badge{
+    padding:7px 10px;
+    font-size:12px;
+  
+}
+/* ===============================discount-container======== */
+.discount-class{
+    height:auto;
+    padding: 80px 0;
+} 
+.discount-container{
+    width:90%;
+    border-radius: 10px;
+    grid-template-columns: repeat(1,1fr);
+}
+.discount-left{
+    width: 100%;
+}
+.discount-right{
+    padding: 20px 0;
+ }
+ .dis-heading{
+    font-size:var(--f30);
+ }
+.discount-right form{
+    flex-direction: column;
+}
+.discount-right form input{
+    width: 100%;
+    border-radius: 30px;
+}
+.discount-right form button{
+    width: 100%;
+    border-radius:30px;
+    margin-top: 20px;
+    padding: 15px 20px ;   
+}
+
+/* ===========================footer-sec=========== */
+.footer-class{
+    height:fit-content;
+    padding:50px 0;
+}
+.footer{
+    width: 90%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns:auto auto;
+}
+.footer div:nth-child(1){
+    grid-column: 1 / span 2;
+}
+.footer div:nth-child(4){
+    grid-column: 1 / span 2;
+}
+
+.copyright-info .para{
+   padding: 0 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================2nd media=========================== */
+@media (min-width:576px) and (max-width:800px) {
+    .header .navbar{
+        justify-content: space-between;
+        padding: 0 var(--p30);
+    }
+    .header .navbar .nav-right ul,.header .navbar .nav-right form{
+        display: none;
+    }
+    .header .navbar .nav-right .setting {
+        font-size: var(--f20);
+        border: 1px solid var(--black);
+        padding: var(--p5) var(--p10);
+        border-radius: var(--p10);
+        margin-left: var(--p20);
+        background-color: var(--lightblue);
+        color: white;
+        display: block;
+    }
+    .main, .main2, .main3, .main4{
+        height: calc(100vh - 56.8px);
+        margin-top: 56.8px;
+    }
+    
+    .main-heading h1{
+        font-size:var(--f50);
+    }
+    .main-heading p{
+        font-size: var(--f18);
+    }
+    .main-heading a{
+        margin: var(--p20) 0;
+    }
+    .main-heading{ 
+        padding:var(--p50);
+    }
+    /* ========================================= */
+    .form-sec .form-tour{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    .form-sec .form-tour{
+        margin: 0 15px;        
+    }
+    .form-sec .form-tour .find-btn button{
+        width: 90%;
+        margin-top: 20px;
+        
+    }
+
+    /* ================about-sec===================== */
+    .about-sec {
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .about-left{
+        width: 100%; 
+    }
+    .about-sec .about-right{
+        width: 100%;
+        padding:0;
+    }
+    .about-sec .about-right #plan-head{
+        font-size:var(--f30);
+    }
+    .about-sec .about-right .para{
+        line-height: 25px;
+        letter-spacing:1px;
+    }
+    .about-sec .about-right p{
+        margin-top: var(--p15);
+        font-size: var(--f15);
+    }
+
+        /* ==========================features-sec=================== */
+
+.feature-head h1{
+    font-size: var(--f30);
+}
+.feature-head p{
+    font-size: var(--f25);
+}
+/* ======================= statistics-sec ============ */
+.statistics-container{
+    width: 100vw;
+}
+
+.statistics-head h1{
+    font-size: var(--f30);
+}
+.statistics-head .exp{
+    font-size: var(--f30);
+}
+.statistics-body{
+    margin-top: 50px;
+    grid-template-columns: repeat(4,1fr);
+}
+.statistics-body .icon{
+    font-size: var(--f25);
+    width: 60px;
+    height: 60px;
+}
+.statistics-body .num{
+    font-size: var(--f40);
+}
+.statistics-body .sub-des{
+    font-size: var(--f16);
+}
+.container-des{
+    gap: 5px;
+}
+/* ======================service-sec========== */
+.service-class{
+    padding: 0 20px;
+}
+.service-heading h1{
+    font-size: var(--f35);
+}
+.service-heading p{
+    font-size: var(--f35);
+}
+.service-body{
+    grid-template-columns: repeat(2,1fr);
+    place-content: center;
+}
+.service-body :nth-of-type(3){
+     grid-column: 1 / span 2;
+    justify-self: center;
+}
+.box1{
+    width: 320px;
+    height: 300px;
+    margin-bottom: 0;
+}
+.box1 a{
+ padding: 20px;
+}
+.box1 .service-description{
+    font-size: var(--f14);
+    line-height: 20px;
+}
+/* ======================features-sec2====== */
+
+.tour-features .tour-container{
+    padding:0 0px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 80px auto;
+    width: 90%;
+}
+.tour-container .tour-left{
+    width: 100%;
+    height:100vh;
+}
+.tour-container .tour-right{
+    width: 100%;   
+    padding: 0;
+}
+.tour-right h1{
+    margin-top: 50px;
+    font-size: var(--f25);
+}
+.tour-right .sub-heading{
+    font-size: var(--f30);
+}
+.tour-right .para{
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+.tour-right .speciality{
+    margin: 0px 0;
+}
+.tour-right .speciality .fa-certificate, .fa-money-bill-wave{
+    padding:15px;
+} 
+.speciality .bold-sub-heading{
+    margin-left: 20px;
+}
+/* ===============================blog-sec=============== */
+.blog-class{
+    padding: 0;
+}
+.blog{
+    width: 96%;
+    padding: 50px 0;
+}
+
+.blog-body{
+    width: 94%;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+.blog-row1{
+    gap:15px;
+    font-size: var(--f14);
+}
+
+.blog-data .blog-name a{
+    font-size:20px;
+}
+.blog-data p{
+    line-height: 25px;
+}
+.blog-data .blog-button{
+    width: 120px;
+    padding: 12px 0px;
+
+}
+.blog-data .blog-button a{
+    font-size: var(--f16);
+}
+.blog-img .badge{
+    padding:7px 10px;
+    font-size:12px;
+    
+}
+
+.blog-box:nth-child(3){
+    grid-column: 1 / span 2 !important;
+}
+/* ===============================discount-container======== */
+.discount-class{
+    height:auto;
+    padding: 80px 0;
+} 
+.discount-container{
+    width:90%;
+    border-radius: 10px;
+    grid-template-columns: repeat(1,1fr);
+}
+.discount-left {
+    width: 45%;
+}
+.discount-right{
+    padding: 20px 0;
+ }
+ .dis-heading{
+    font-size:var(--f30);
+ }
+ 
+.discount-right form input{
+    padding:17px;
+    
+}
+.discount-right form button{
+    padding:0;
+       
+}
+/* ===========================footer-sec=========== */
+.footer-class{
+    height:fit-content;
+    padding:50px 0;
+}
+.footer{
+    width: 90%;
+    display: grid;
+    grid-template-columns:50% 25% 25%;
+}
+
+.footer div:nth-child(4){
+    padding-top: 40px;
+}
+
+.copyright-info .para{
+   padding: 0 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ====================3rd media================== */
+ @media (min-width:801px) and (max-width:1024px) {
+    .main-heading h1{
+        font-size:var(--f50);
+    }
+    .main-heading p{
+        font-size: var(--f18);
+    }
+    .main-heading a{
+        margin: var(--p20) 0;
+    }
+    .main-heading{ 
+        padding:var(--p50);
+    }
+    
+/* ======================================= */
+    .form-sec .form-tour{
+        width: 100%;
+        gap: 10px;
+    }
+    .form-sec .form-tour{
+        margin: 0 15px;        
+    }
+    .form-sec .form-tour .find-btn button{
+        width: 100%;
+        margin-top: 20px;
+        
+    }
+    /* ================about-sec===================== */
+    .about-sec {
+        width: 90%;
+    }
+    .about-left{
+        width: 50%; 
+    }
+    .about-sec .about-right{
+        width: 50%;
+        padding: 0;
+    }
+    .about-sec .about-right #plan-head{
+        font-size:var(--f30);
+    }
+    .about-sec .about-right .para{
+        line-height: 25px;
+    }
+    .about-sec .about-right p{
+        margin-top: var(--p5);
+    }
+    .about-sec .about-right a{
+        margin: 20px 0;
+    }
+        
+    /* ======================= statistics-sec ============ */
+    .statistics-container{
+        width: 100vw;
+
+    }
+
+    .statistics-head h1{
+        font-size: var(--f40);
+    }
+    .statistics-head .exp{
+        font-size: var(--f40);
+    }
+    .statistics-body{
+        margin-top: 50px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .statistics-body .icon{
+        font-size: var(--f30);
+    }
+    .statistics-body .num{
+        font-size: var(--f40);
+    }
+    .statistics-body .sub-des{
+        font-size: var(--f16);
+    }
+    .container-des{
+        gap: 5px;
+    }
+    /* ======================service-sec========== */
+    .service-class{
+        padding: 0 20px;
+        margin-bottom: 100px;
+    }
+    .service-heading{
+        margin-bottom: 50px;
+    }
+    .service-body{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .box1{
+        width: 300px;
+        height: 300px;
+        margin: 0;
+       }
+       .box1 a{
+           gap: 10px;
+       }
+       .box1 .bold-heading{
+           font-size: var(--f25);
+       }
+       .box1 .service-description{
+           font-size: var(--f14);
+           font-weight: 500;
+           line-height: 30px;
+       }
+       /* ======================features-sec2====== */
+.featured-tours{
+    margin-top: 80px;
+}
+.tour-features .tour-container{
+   width: 96%;
+   height: 70%;
+}
+.tour-container .tour-left{
+    height:500px;
+}
+.tour-container .tour-right{
+    padding:40px 0 40px 40px;
+}
+.tour-right .para{
+    word-spacing: 0;
+
+}
+.tour-right .speciality{
+    margin: 0px 0;
+}
+.tour-right .speciality .fa-certificate, .fa-money-bill-wave{
+    padding:15px;
+} 
+.speciality .bold-sub-heading{
+    margin-left: 20px;
+}
+/* ===============================blog-sec=============== */
+.blog-class{
+    padding: 0;
+}
+.blog{
+    width: 96%;
+    padding: 50px 0;
+}
+.blog-body{
+    width: 96%;
+    
+}
+
+.blog-row1{
+    gap:15px;
+    font-size: var(--f14);
+}
+.blog-data{
+    gap: 15px;
+}
+.blog-data .blog-name a{
+    font-size:24px;
+}
+.blog-data p{
+    line-height: 25px;
+}
+.blog-data .blog-button a{
+    font-size: var(--f16);
+}
+.blog-img .badge{
+    padding:7px 10px;
+    font-size:12px;
+    
+}
+/* ===============================discount-container======== */
+.discount-class{
+    height:auto;
+    padding: 80px 0;
+} 
+.discount-container{
+    width:90%;
+    grid-template-columns: repeat(2,1fr);
+}
+ .dis-heading{
+    font-size:var(--f30);
+ }
+.discount-right form input{
+    padding:10px;
+}
+.discount-right form button{
+    padding:10px ;   
+}
+/* ===========================footer-sec=========== */
+.footer-class{
+    height:fit-content;
+    padding:80px 0;
+}
+.footer{
+    width: 90%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns:30% 25% 15% 30%;
+}
+.footer div:nth-child(3){
+    justify-self: flex-start;
+}
+
+}
+/* ================================ */

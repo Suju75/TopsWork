@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Registration form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+      }
+      body {
+        width: 100vw;
+        padding: 0 10px;
+        font-family: sans-serif;
+        overflow-x: hidden;
+      }
+      .main {
+        border: 2px solid black;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px 30px;
+        --black: rgba(0, 0, 0, 0.85);
+      }
+      .main h1 {
+        font-size: 40px;
+        color: var(--black);
+        padding: 10px 0 40px 0;
+      }
+      .main table {
+        width: 100%;
+      }
+      .main table td:first-child {
+        width: 20%;
+      }
+      .main table td:last-child {
+        width: 80%;
+      }
+      .main table td:last-child input[type="text"],
+      input[type="password"],
+      select,
+      textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px 0;
+      }
+      .main input[type="submit"] {
+        font-size: 20px;
+        padding: 10px 40px;
+        color: white;
+        background-color: blue;
+        outline: none;
+        border: none;
+        transition: 0.2s ease;
+      }
+      .main input[type="submit"]:hover {
+        background-color: black;
+      }
+      #msg {
+        color: red;
+        font-size: 20px;
+        padding: 10px;
+      }
+      .error {
+        outline: none;
+        border: 2px solid red;
+      }
+      .prow {
+        position: relative;
+      }
+      .fa-solid {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Register here</h1>
+      <form action="" method="get" onsubmit="return check()">
+        <table>
+          <tr>
+            <td>First name</td>
+            <td><input type="text" id="fname" name="fname" /></td>
+          </tr>
+          <tr>
+            <td>Last name</td>
+            <td><input type="text" id="lname" name="lname" /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" id="Male" name="gender" checked/> Male
+              <input type="radio" id="famale" name="gender" /> Female
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              <textarea
+                rows="3"
+                name="textarea"
+                id="address"
+                placeholder="Enter character between 35 to 200"
+                maxlength="200"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>
+              <select name="city" id="city">
+                <option value="-1">--select--</option>
+                <option value="surat">Surat</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="baroda">baroda</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile No.</td>
+            <td>
+              <input type="text" id="mobileNo" maxlength="10" minlength="10" />
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="text" id="email" /></td>
+          </tr>
+          <tr class="prow">
+            <td>Password</td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter 8 to 15 character"
+              />
+              <i class="fa-solid fa-eye"></i>
+            </td>
+          </tr>
+          <tr class="prow">
+            <td>Confirm Password</td>
+            <td>
+              <input type="password" id="cpassword" placeholder="" />
+              <i class="fasolid2 fa-solid fa-eye"></i>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td id="msg"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <script>
+      let fname = document.getElementById("fname");
+      let lname = document.getElementById("lname");
+      let addr = document.getElementById("address");
+      let city = document.getElementById("city");
+      let mobile = document.getElementById("mobileNo");
+      let email = document.getElementById("email");
+      let pass = document.getElementById("password");
+      let cpass = document.getElementById("cpassword");
+      let msg = document.getElementById("msg");
+      function check() {
+        if (
+          fname.value.trim() === "" ||
+          lname.value.trim() === "" ||
+          addr.value.trim() === "" ||
+          city.value === "-1" ||
+          mobile.value === "" ||
+          email.value === "" ||
+          pass.value === "" ||
+          cpass.value === ""
+        ) {
+          msg.innerHTML = "All field should not be empty.";
+          return false;
+        } else {
+          msg.innerHTML = "";
+        }
+        if(!namecheck(fname)){
+          return false;
+        }
+        if(!namecheck(lname)){
+          return false;
+        }
+        // only fanme and lname is check for form submission
+        // ======other funcions are not checked====
+        return true;
+      }
+      // ====================
+      function namecheck(fieldname) {
+        let ptn = /^[a-zA-Z\s]*$/;
+        if (!ptn.test(fieldname.value) || fieldname.value.trim() === "") {
+          msg.innerHTML = "Invalid name";
+          fieldname.classList.add("error");
+          return false;
+        } else {
+          msg.innerHTML = "";
+          fieldname.classList.remove("error");
+        }
+        return true;
+      }
+      fname.addEventListener("input", () => namecheck(fname));
+      lname.addEventListener("input", () => namecheck(lname));
+      // ==========mobile===============
+      mobile.addEventListener("input", () => {
+        let ptn = /^[6-9][0-9]*$/;
+        if (!ptn.test(mobile.value) || mobile.value.trim().length<10) {
+          mobile.classList.add("error");
+          msg.innerHTML = "invalid mobile NO.";
+          return false;
+        } else {
+          msg.innerHTML = "";
+          mobile.classList.remove("error");
+          return true;
+        }
+      });
+      // ===========email=======
+      email.addEventListener("blur", () => {
+        let ptn = /^[a-zA-Z][a-zA-Z0-9%$+-]*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,5}$/;
+
+        if (!ptn.test(email.value)) {
+          email.classList.add("error");
+          msg.innerHTML = "invalid email";
+          return false;
+        } else {
+          email.classList.remove("error");
+          msg.innerHTML = "";
+          return true;
+        }
+      });
+      // ==-==================addreess=========
+      addr.addEventListener("blur", () => {
+        if (addr.value.trim().length < 35 || addr.value.trim().length > 200) {
+          msg.innerHTML = "address must be within range of 35 to 200";
+          addr.classList.add("error");
+          return false;
+        } else {
+          msg.innerHTML = "";
+          addr.classList.remove("error");
+          return true;
+        }
+      });
+
+      // =============pass=======
+      let fasolid = document.querySelector(".fa-solid");
+      let fasolid2 = document.querySelector(".fasolid2");
+      function passVis(p,cls){
+        if(p.type==="text"){
+          p.type = "password";
+          cls.classList.remove("fa-eye-slash");
+          cls.classList.add("fa-eye");
+          
+        }
+        else{
+          cls.classList.remove("fa-eye");
+          cls.classList.add("fa-eye-slash");
+          p.type = "text";
+        }
+      }
+      fasolid.addEventListener("click", ()=> {passVis(pass,fasolid)});
+      fasolid2 .addEventListener("click", ()=> {passVis(cpass,fasolid2)});
+      pass.addEventListener("blur",()=>{
+        if(pass.value.trim().length < 8 || pass.value.trim().length >15){
+          pass.classList.add("error");
+          msg.innerHTML = "password must be in given length"
+        }
+        else{
+          pass.classList.remove("error");
+          msg.innerHTML = ""
+        }
+        
+      })
+      // ====================
+      cpass.addEventListener("input",()=>{
+        if(cpass.value !== pass.value){
+          cpass.classList.add("error");
+          msg.innerHTML = "password not match"
+          return false;
+        }
+        else{
+          msg.innerHTML = ""
+          cpass.classList.remove("error");
+          return true;
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+td,th{
+  padding: 10px;
+}
+
+body{
+  --white : white;
+  --black :black;
+  background-color: var(--white);
+  color: var(--black);
+}
+body.dark{
+  --white:black;
+  --black : white;
+}

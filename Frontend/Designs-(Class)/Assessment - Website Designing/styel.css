@@ -1,0 +1,1024 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed&family=Sevillana&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root{
+    --font-cursive:"Sevillana", cursive;
+    --font-roboto:"Roboto Condensed", sans-serif;
+    --font-great:"Great Vibes", cursive;
+    --font-ubuntu:"Ubuntu Sans", sans-serif;;
+/* ======================================================= */
+    --f10:10px;
+    --f14:14px;
+    --f15:15px;
+    --f16:16px;
+    --f18:18px;
+    --f20:20px;
+    --f25:25px;
+    --f30:30px;
+    --f35:35px;
+    --f40:40px;
+    --f50:50px;
+    --f80:80px;
+    --f100:100px;
+    --p160:160px;
+    /* ========================================================== */
+    --p5:5px;
+    --p10:10px;
+    --p15:15px;
+    --p20:20px;
+    --p30:30px;
+    --p40:40px;
+    --p50:50px;
+    --p80:80px;
+    --p100:100px;
+    --p150:150px;
+    
+    /* ===================================================== */
+    --black:black;
+    --white:white;
+    --salmon:salmon;
+    --light:rgba(219, 219, 229, 0.439);
+    --grey:grey;
+    --lightgrey:rgba(185, 180, 180, 0.404);
+    --lightblue:rgb(37, 37, 223);
+    --lightseagreen:lightseagreen;
+    --primary_blue:#336dd5;
+    --light:#f2f5f7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--primary_blue);
+    font-family: var(--font-ubuntu);
+    /* overflow-x: hidden; */
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 111;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+header .logo{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .logo:hover{
+    filter: drop-shadow(0 0 5px var(--primary_blue));
+}
+header .logo img{
+    width:40px;
+    height: 100%;
+    object-fit: cover;
+    background-color:var(--white);
+    border-radius: 50%;
+}
+header .logo h1{
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header ul{
+    display: flex;
+    gap: 10px;
+}
+nav ul a{
+    /* font-size: 18px; */
+    text-transform: capitalize;
+    padding: 15px 10px;
+    color: var(--white);
+}
+nav ul a:hover{
+    filter: drop-shadow(0 0 5px var(--primary_blue));
+}
+.main{
+    width: 100%;
+    height:100vh;
+    background: url(http://news.uns.purdue.edu/images/campus-students.jpg)no-repeat;
+    background-size: cover;
+    padding: 50px 150px;
+    position: relative;
+    /* background-position: cetne; */
+}
+.main::before{
+    content: "";
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+.main .text-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+}
+.text-caption h6{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 900;
+    color:var(--white);
+    letter-spacing: 1px;
+    margin-bottom: var(--p20);
+}
+.text-caption h2{
+    margin-bottom: var(--p20);
+
+    text-transform: uppercase;
+    /* filter: drop-shadow(0px 0px 2px white); */
+    margin-top:var(--p20) 0 var(--p20) 0;
+    font-size: 36px;
+    font-weight: 800;
+    color:var(--white);
+    letter-spacing: 1px;
+}
+.text-caption p{
+    max-width: 600px;
+    color: var(--white);
+    line-height:1.5;
+    word-spacing: 1px;
+}
+.text-caption a{
+    color: aqua;
+    font-size: var(--f14);
+}
+.btn{
+margin: 30px 0;
+}
+.btn a{
+    text-transform: uppercase;
+    font-size: var(--f14);
+    color:var(--white);
+    background-color: #a12c2f;
+    padding: 12px 25px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    transition: all .3s;
+}
+.btn a:hover{
+    background-color: var(--primary_blue);
+}
+.service-container{
+    width: 100%;
+    padding: 50px;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    /* background-color: red; */
+    
+}
+.service-container .service-row{
+    width: 90%;
+    display: flex;
+    margin:auto;
+    overflow: hidden;
+}
+.service-row .service-box{
+    min-width:400px;
+    background-image: url("https://themewagon.github.io/edu-meeting/assets/images/service-item-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--white);
+    padding: 40px;
+    margin-right: 30px;
+    animation: slider 20s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    transition: 0.5s ease;
+}
+.service-box .icon{
+    max-width: 60px;
+    margin: 0 auto;
+}
+.service-box .icon span{
+    font-size: var(--f40);
+    color:orange;
+    border: solid;
+    border-radius:50%;
+    padding: 10px;
+}
+.service-down-content h4{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.service-down-content p{
+    color: var(--white);
+    font-size: 13px;
+    line-height: 25px;
+}
+@keyframes slider {
+   0%{
+    transform: translateX(0);
+   }
+    15%{
+    transform: translateX(calc(-100% + -30px));
+   }
+   25%{
+    transform: translateX(calc(-200% + -60px));
+    }
+   35%{
+    transform: translateX(calc(-300% + -90px));
+    }
+   45%{
+    transform: translateX(calc(-400% + -120px));
+    }
+   60%{
+    transform: translateX(calc(-500% + -150px));
+    }
+   75%{
+    transform: translateX(calc(-600% + -180px));
+    }
+   88%{
+    transform: translateX(calc(-700% + -210px));
+    }
+   100%{
+    transform: translateX(calc(-800% + -240px));
+    }
+}
+
+
+.btns{
+    width: 100%;
+    padding: 0 30px;
+    position:absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.btns .btn{
+    font-size: var(--f50);
+    color: white;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 30px;
+}
+.upcoming-meetings{
+        background-image: url(https://themewagon.github.io/edu-meeting/assets/images/meetings-bg.jpg);
+        background-position:center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 230px;
+        padding-bottom: 110px;
+}
+.mettings-container{
+    width: 100%;
+    padding: 0 120px;
+    margin: auto;
+}
+/* ======== */
+.section-heading{
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+}
+.section-heading h2{
+    font-weight: 900;
+    border-bottom: 1px solid grey;
+    padding-bottom:var(--p20) ;
+}
+.categories{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-right: 45px;
+    height: max-content;
+}
+.categories h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f272b;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.categories ul{
+    padding-bottom: 10px;
+}
+.categories ul li{
+    /* display: inline-block; */
+    margin-bottom: 20px;
+    word-spacing: 1px;
+}
+.categories ul li a{
+    color: var(--black);
+    font-weight: 600;
+}
+.main-button-red{
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    margin-top: 15px;
+}
+.main-button-red a{
+    font-size: 13px;
+    color: #fff;
+    background-color: #a12c2f;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    width: 100%;
+    text-align: center;
+}
+.flex-container{
+    display: grid;
+    grid-template-columns: 33.33% 66.66%;
+    padding-top: var(--p50);
+}
+.box-row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.box-row .box-item{
+    background-color: #fff;
+    border-radius: var(--p20);
+    overflow: hidden;
+    /* padding: var(--p20); */
+}
+.box-item img{  
+    width: 100%;
+    object-fit: cover;
+}
+.thumb{
+    position: relative;
+}
+.thumb .price{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: 900;
+    padding: 10px;
+}
+.down-content{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    gap: var(--p20);
+}
+.down-content .date span{
+    display: block;
+    color: var(--black);
+    font-size: var(--f20);
+}
+.down-content .date h6{
+    color: #a12c2f;
+    font-size: 16px;
+}
+.box-item .down-content a{
+    color: var(--black);
+    display: block;
+    padding: 10px 0;
+}
+.down-content p{
+    font-size: var(--f14);
+    color:rgba(0, 0, 0);
+    /* font-weight: 600; */
+    font-size: 15px;
+}
+.apply-now{
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/apply-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px;
+}
+.apply-container{
+    width: 100%;
+    padding-right: 120px;
+    padding-left: 120px;
+    /* margin: auto; */
+}
+.apply-row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+}
+.apply-box{
+    align-self: center;
+}
+.apply-box-item{
+    width: 100%;
+
+}
+.apply-item{
+    background-color: rgba(250,250,250,0.15);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+.apply-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.apply-item p{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.apply-main-button-red a,.apply-main-button-yellow a{
+    font-size: 13px;
+    color: #fff;
+    background-color: #a12c2f;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+.apply-main-button-yellow a{
+    background-color:rgb(135, 135, 6);
+
+}
+.accordions{
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #fff;
+    margin-left: 45px;
+}
+.accordions .accordion {
+    border-bottom: 1px solid #eee;
+}
+.accordion-head.is-open {
+    color: #f5a425;
+    border-bottom: none;
+}
+.accordion-head .icon span{
+    transform: rotate(90deg);
+    float: right;
+    transition: transform 200ms ease-in-out;
+}
+.accordion-body{
+    overflow: hidden;
+    height: 0;
+    transition: height 300ms ease-in-out;
+    border-bottom: 1px solid #fff;
+    padding: 16px 20px;
+}
+.active{
+    height: 120px;
+}
+.accordion-body .content {
+    padding: 20px;
+    padding-top: 0;
+}
+.accordion-body .content p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #2a2a2a;
+}
+.accordion-head {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f272b;
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+    border-bottom: 1px solid #fff;
+}
+.accordion-head .icon {
+    float: right;
+    transition: transform 200ms ease-in-out;
+}
+.accordions .last-accordion {
+    border-bottom: none;
+}
+/* ==================course section ============== */
+.our-course{
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/meetings-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 140px;
+    padding-bottom: 130px;
+}
+.course-heading h2{
+    line-height: 40px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(250,250,250,0.15);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+.course-container{
+    width: 100%;
+    padding: 0 110px;
+    position: relative;
+}
+.owl-item{
+    width: 300px;
+    margin-right: 30px;
+    
+}
+.course-box img{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+.course-down-content{
+    background-color: #fff;
+}
+.course-down-content h4{
+    padding: 25px;
+    font-size: 18px;
+    color: #1f272b;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.course-down-content .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+.course-down-content .info ul li{
+    display: inline-block;
+    margin-right: 1px;
+    color: #f5a425;
+    font-size: 14px;
+}
+.course-down-content .info .dollar{
+    color: #a12c2f;
+    font-size: 15px;
+    font-weight: 600;
+}
+.course-box-wrapper{
+    display: flex;
+    width: fit-content;
+    transition: 0.5s ease;
+    /* overflow: hidden; */
+}
+.course-box{
+    overflow-x: hidden;
+}
+
+.c-btns{
+    padding: 0 20px;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    justify-content: space-between;
+}
+.c-btn{
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: var(--f20);
+}
+section.our-facts{
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/facts-bg.jpg);
+    background-position: center center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 110px 125px 110px;
+}
+.our-facts .fact-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.fact-heading h2{
+    font-size: 38px;
+    color: #fff;
+    /* background-color: red; */
+    padding-right: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 50px;
+}
+.count-area-content{
+    text-align: center;
+    background-color: rgba(250,250,250,0.15);
+    border-radius: 20px;
+    padding: 35px 30px 45px 30px;
+    margin: 15px 0px;
+}
+.count-digit{
+    margin: 5px 0px;
+    color: #f5a425;
+    font-weight: 700;
+    font-size: 36px;
+}
+.count-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+.fact-flex{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    padding:  0 20px;
+}
+.fact-bottom{
+    display: flex;
+    flex-direction: column;
+}
+.fact-bottom-down{
+    position: relative;
+    top: 10%;
+}
+.video{
+    text-align: center;
+    margin-left: 70px;
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/video-item-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* padding: 0px 0; */
+    margin-top: 80px;
+    border-radius: 20px;
+}
+.video img{
+    width: 100%;
+    padding: 170px 0px;
+    max-width: 56px;
+    
+}
+/* =====================contact-us================== */
+.contact-us{
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/meetings-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px 0px 0px;
+}
+.contact-us form#contact{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+}
+section.contact-us #contact h2 {
+    text-transform: uppercase;
+    color: #1f272b;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+section.contact-us #contact input {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+section.contact-us #contact textarea {
+    width: 100%;
+    min-height: 140px;
+    max-height: 180px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.contact-us #contact button {
+    font-size: 13px;
+    color: #fff;
+    background-color: #a12c2f;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    border: none;
+    outline: none;
+}
+.contact-us .right-info {
+    background-color: #a12c2f;
+    border-radius: 20px;
+    padding: 40px;
+}
+.contact-us .right-info ul li {
+    display: inline-block;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+.contact-us .right-info ul li h6 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact-container{
+    padding: 0 100px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns:75% 25%;
+    justify-content: center;
+    align-items: center;
+}
+.form-row-input{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+#web-url{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.contact-us .right-info ul li span {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+.footer {
+    text-align: center;
+    margin-top: 140px;
+    border-top: 1px solid rgba(250, 250, 250, 0.15);
+    padding: 50px 0px;
+}
+.footer .f-des {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.footer .f-des a {
+    color: #f5a425;
+}
+/* ========= */
+header span{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+/* ================media for 576px=============== */
+@media (max-width:768px) {
+    
+    header{
+        width: 100vw;
+        padding: 20px 15px;
+    }
+    header ul{
+        transition: 0.5s ease-in-out;
+        transform: translateX(100%);
+        padding-top: var(--p30);
+        padding-bottom: var(--p30);
+        height: 100vh;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        gap: 20px;
+        text-align: center;
+        background: rgba(0, 0, 0,0.9);
+        backdrop-filter: blur(5px);
+    }
+    header ul li a{
+        display: block;
+    }
+    header span.menu-icon{
+        display: block !important;
+        border: solid var(--white);
+        border-radius: var(--p20);
+        padding: 5px;
+        color: var(--white);
+    }
+    
+    header .logo h1{
+        font-size: 20px;
+    }
+    .main{
+        height:100dvh;
+        padding: 50px 10px;
+        background-position: center;
+    }
+    .main .text-caption {
+        top: 60%;
+        padding-bottom: 100px;
+    }
+    .text-caption h2{
+        margin: var(--p10) 0;
+        font-size: 20px;
+        
+    }
+    
+    .service-container{ 
+        padding: 50px 10px;
+        top: 100%;
+        
+    }
+    .service-container .service-row{
+        width: 100%;
+    }
+    .service-row .service-box{
+        min-width:290px;
+        padding: 20px;
+    }
+    .btns{
+        display: none !important;
+    } 
+    
+    .upcoming-meetings{
+            padding-top: 350px;
+    }
+    .mettings-container{
+        padding: 0 15px;
+    }
+    /* ======== */
+ 
+    .section-heading h2{
+        font-size: var(--f20);
+    }
+    .categories{
+        margin-right: 0px;
+    }
+    .flex-container{
+       gap: 30px;
+        grid-template-columns: 1fr;
+       
+    }
+    .box-row{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .apply-now{
+        background-image: url(https://themewagon.github.io/edu-meeting/assets/images/apply-bg.jpg);
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 140px 0px;
+    }
+    .apply-container{
+        
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .apply-row{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    
+    .apply-item p{
+        line-height: 1.5;
+    }
+    .apply-main-button-yellow a{
+        background-color:rgb(135, 135, 6);
+    
+    }
+    .accordions{
+        padding: 0px;
+        margin-left: 0px;
+    }
+    /* ==================course section ============== */
+    
+    .course-heading h2{
+        text-align: center;
+    }
+    .course-container{
+        padding: 0 15px;
+    }
+    .owl-item{
+        width: 300px;
+        
+    }
+    .c-btns{
+        padding: 0 110px;
+        top: 105%;
+    }
+    section.our-facts{
+        padding: 140px 15px 125px 15px;
+    }
+    .our-facts .fact-container{
+        grid-template-columns: 1fr;
+    }
+    .fact-heading h2{
+        font-size: 32px;
+        text-align: center;
+        padding-right: 0px;
+    }
+    /* ============= */
+    .count-area-content{
+        text-align: center;
+        background-color: rgba(250,250,250,0.15);
+        border-radius: 20px;
+        padding: 35px 30px 45px 30px;
+        margin: 15px 0px;
+    }
+    .count-digit{
+        margin: 5px 0px;
+        color: #f5a425;
+        font-weight: 700;
+        font-size: 36px;
+    }
+    .count-title{
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+    .fact-flex{
+        grid-template-columns: 1fr;
+        padding:  0 15px;
+    }
+
+    .fact-bottom-down{
+        top: -5%;
+    }
+    .video{
+        margin-left: 0px;
+        margin-top: 0;
+    }
+    /* =====================contact-us================== */
+    .contact-us{
+        padding: 140px 0px 0px 0px;
+    }
+    .contact-us form#contact{
+        padding: 20px;
+    }
+    section.contact-us #contact h2 {
+        text-align: center;
+    }
+    
+    
+    
+    .contact-container{
+        padding: 0 15px;
+        grid-template-columns:1fr;
+        
+    }
+    .form-row-input{
+        grid-template-columns: repeat(1,1fr);
+        gap: 0px;
+    }
+    
+    .footer .f-des {
+        line-height: 1.58;
+       margin-bottom: 0px;
+    }
+       
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 cube</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: sans-serif;
+        }
+        i{
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            display: block;
+            margin-bottom: 50px;
+        }
+        #cube{
+            margin-left: 40px;
+        }
+        #cube p{
+            padding: 5px;
+        }
+        input,button{
+            margin-left: 20px;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        button{
+            margin-left: 0;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+        }
+        input:focus{
+            outline: none;
+            border: 2px solid green;
+        }
+        h3{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 400px;
+            width: 400px;
+        }
+        h3 p {
+            font-size: 20px;
+            margin-left: 30px;
+            padding: 5px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <i>(6) Write a program to print cube of 1 to 10 number using any loop.
+    </i>
+    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_cube()">get cube</button></p>
+    <h3 id="cube"></h3>
+    <script>
+        function print_cube(){
+       let n = document.getElementById("num").value;
+       let cube = document.getElementById("cube");
+       cube.innerHTML = " ";
+       for(let i=1; i<=n; i++){
+        let newelment = document.createElement("p");
+        newelment.innerHTML = `${i}<sup>3</sup> = ${i*i*i}`
+        cube.appendChild(newelment);
+       }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculation using currying</title>
+    <style>
+      .main{
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        box-shadow: 0 0 5px black;
+        margin: 50px auto;
+      }
+      .inputfeild{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+      .inputfeild input{
+        flex: 1;
+      }
+      label{
+        width: 30%;
+        font-size: 20px;
+      }
+      input{
+        font-size: 20px;
+      }
+      .btn button{
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+      #print{
+        font-size: 25px;
+        text-transform: capitalize;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="inputfeild">
+        <label for="height">Enter Height :</label>
+        <input type="number" class="inputValue" id="height" />
+      </div>
+      <div class="inputfeild">
+        <label for="width">Enter width :</label>
+        <input type="number" class="inputValue" id="width" />
+      </div>
+      <div class="inputfeild">
+        <label for="padding">Enter padding :</label>
+        <input type="number" class="inputValue" id="padding" />
+      </div>
+      <div class="inputfeild">
+        <label for="border">Enter border :</label>
+        <input type="number" class="inputValue" id="border" />
+      </div>
+      <div class="inputfeild">
+        <label for="margin">Enter margin :</label>
+        <input type="number" class="inputValue" id="margin" />
+      </div>
+      <div class="btn">
+      <button id="calbtn">calculate</button>
+    </div>
+    <h3 id="print"></h3>
+    </div>
+    <script>
+     const print = document.getElementById("print")
+      const cal = document.getElementById("calbtn");
+      function caluculate(height) {
+        return function (width) {
+          return function (padding) {
+            return function (border) {
+              return function (margin) {
+                return height + width + padding * 4 + border * 4 + margin * 4;
+              };
+            };
+          };
+        };
+      }
+      cal.addEventListener("click", () => {
+        const height = +document.getElementById("height").value;
+      const width = +document.getElementById("width").value;
+      const padding = +document.getElementById("padding").value;
+      const border = +document.getElementById("border").value;
+      const margin = +document.getElementById("margin").value;
+      const inputValue = document.querySelectorAll(".inputValue")
+      print.innerHTML = `Total dimension/space of div is : ${(caluculate(height)(width)(padding)(border)(margin))}`;
+
+      inputValue.forEach(e=>{
+        if(e.value == "" || e.value == NaN){
+          print.innerHTML = 'Please Enter valid input'
+          e.style.border = "2px solid red"
+          print.style.color = "red"
+        }
+        else{
+          print.style.color = "green"
+          e.style.border = "2px solid green"
+        }
+      })
+      
+            });
+    </script>
+  </body>
+</html>

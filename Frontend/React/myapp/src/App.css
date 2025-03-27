@@ -1,0 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+body{
+  width: 100%;
+  background-color:#ddd;
+  overflow-x: hidden;
+}
+.heading{
+  padding: 20px;
+}
